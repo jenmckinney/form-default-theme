@@ -1,0 +1,211 @@
+@font-face {
+  font-family: manifold;
+  src: url($manifold-regular) format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manifold;
+  src: url($manifold-bold) format("ttf");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manifold;
+  src: url($manifold-extrabold) format("ttf");
+  font-weight: bolder;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: b612;
+  src: url($b612-regular) format("ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body.custom-wizard {
+  background-image: url($background);
+  background-size: cover;
+  font-family: "manifold";
+  color: #231F20;
+
+  .wizard-field[data-field-mandatory="true"]:not(.checkbox-field) {
+  
+    .input-area::after {
+      content: "This field is required";
+      display: block;
+      margin-top: 0.5em;
+      color: var(--danger, #0f1184);
+      font-size: var(--font-down-1, 0.85em);
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  .wizard-field {
+    margin-bottom: 0.5em;
+
+    .field-label {
+      font-family: "manifold";
+      font-weight: 400 !important;
+      color: #231f20 !important;
+      margin-bottom: 0px !important;
+    }
+
+    .field-description {
+      font-family: "manifold";
+      font-weight: bold !important;
+      color: #231f20 !important;
+    }
+  }
+
+  code {
+    font-family: "b612";
+    color: #231f20
+  }
+
+  .checkbox-field {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    align-items: center !important;
+    column-gap: 12px !important;
+    row-gap: 2px !important;
+    padding: 10px 0 !important;
+
+    .input-area {
+      grid-column: 1 !important;
+      grid-row: 1 / span 2 !important;
+      align-self: center !important;
+      margin: 0 !important;
+      order: unset !important;
+    }
+
+    & > label.field-label {
+      grid-column: 2 !important;
+      grid-row: 1 !important;
+      text-align: left !important;
+      font-weight: 400 !important;
+      margin: 0 !important;
+      order: unset !important;
+    }
+
+    & > .field-description {
+      grid-column: 2 !important;
+      grid-row: 2 !important;
+      text-align: left !important;
+      font-weight: bold !important;
+      margin: 0 !important;
+      order: unset !important;
+    }
+
+    &[data-field-mandatory="true"]::after {
+      content: "This field is required";
+      display: block !important;
+      grid-column: 1 / span 2 !important;
+      margin-top: 6px !important;
+      color: var(--danger, #e45735);
+      font-size: var(--font-down-1, 0.85em);
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}
+
+.custom-wizard .wizard-step-title p {
+  padding: 0px;
+  text-decoration: none;
+  font-family: "manifold";
+  color: #231F20;
+}
+
+.custom-wizard .wizard-step-description {
+  font-family: "manifold";
+  font-weight: bolder !important;
+  font-size: 1.5em !important;
+}
+
+.custom-wizard .wizard-column {
+  padding: 1rem !important;
+  background-color: #EBEBEA !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #EBEBEA !important;
+}
+
+.custom-wizard .wizard-column-contents {
+  background-color: #EBEBEA !important;
+}
+
+.custom-wizard .ember-text-area {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #f5f5f5 !important;
+}
+
+.custom-wizard .ember-text-field {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #f5f5f5 !important;
+  font-weight: bold !important;
+  color: #231f20 !important;
+}
+
+.custom-wizard .select-kit {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #f5f5f5 !important;
+  font-weight: bold !important;
+  color: #231f20 !important;
+}
+
+.custom-wizard .multi-select-header {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #f5f5f5 !important;
+  font-weight: bold !important;
+  color: #231f20 !important;
+}
+
+.custom-wizard .single-select-header {
+  background-color: #f5f5f5 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #f5f5f5 !important;
+  font-weight: bold !important;
+  color: #231f20 !important;
+}
+
+button.btn.wizard-btn {
+  background-color: #231f20 !important;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08) !important;
+  border-radius: 0.5rem !important;
+  border-color: #231F20 !important;
+  font-weight: bold !important;
+}
+
+.custom-wizard .d-editor-button-bar {
+  border-radius: 0.5rem !important;
+  background-color: #231F20 !important;
+}
+
+.wizard-progress {
+  display: none;
+}
+
+.wizard-footer {
+  display: none;
+}
