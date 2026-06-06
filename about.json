@@ -5,6 +5,7 @@
   "authors": "Jen M",
   "theme_version": "0.1",
   "assets": {
+    "background": "assets/background.png",
     "manifold-bold": "assets/fonts/ManifoldDSA-Bold.ttf",
     "manifold-bolditalic": "assets/fonts/ManifoldDSA-BoldItalic.ttf",
     "manifold-italic": "assets/fonts/ManifoldDSA-RegularItalic.ttf",
